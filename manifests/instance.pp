@@ -30,17 +30,6 @@ define karaf::instance (
   $karaf_configuration_properties = $karaf::params::karaf_configuration_properties,
 ) {
 
-  # ---------------------------------------------
-  # Install dependencies.
-  # ---------------------------------------------
-  ensure_resource('package', 'unzip', {
-    ensure => 'installed',
-  })
-
-  ensure_resource('package', 'wget', {
-    ensure => 'installed',
-  })
-
 # ensure
   if ! ($ensure in [ 'present', 'absent' ]) {
     fail("\"${ensure}\" is not a valid ensure parameter value")
