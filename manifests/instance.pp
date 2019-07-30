@@ -6,7 +6,7 @@ define karaf::instance (
   $service_name                 = undef,
   $service_group_name           = $karaf::service_group_name,
   $service_group_id             = $karaf::service_group_id,
-  $service_user_name            = $karaf:::service_user_name,
+  $service_user_name            = $karaf::service_user_name,
   $service_user_id              = $karaf::service_user_id,
   $file_maven_settings          = $karaf::file_maven_settings,
   $mvn_repositories             = $karaf::mvn_repositories,
