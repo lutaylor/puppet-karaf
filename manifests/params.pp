@@ -29,9 +29,9 @@ class karaf::params {
   # --------------------------------
   $service_name       = 'karaf'
   case $::operatingsystem {
-    'RedHat', 'CentOS', 'Fedora', 'Scientific', 'OracleLinux', 'SLC': {
+    'RedHat', 'CentOS', 'Fedora', 'Scientific', 'OracleLinux', 'SLC', 'Ubuntu': {
 
-      if versioncmp($::operatingsystemmajrelease, '7') >= 0 {
+      if versioncmp($::operatingsystemmajrelease, '7', '18.04') >= 0 {
         $service_provider    = 'systemd'
       } else {
         $service_provider    = 'init'
