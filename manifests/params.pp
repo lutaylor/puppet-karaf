@@ -31,7 +31,7 @@ class karaf::params {
   case $::operatingsystem {
     'RedHat', 'CentOS', 'Fedora', 'Scientific', 'OracleLinux', 'SLC', 'Ubuntu': {
 
-      if versioncmp($::operatingsystemmajrelease, '7', '18.04') >= 0 {
+      if versioncmp($::operatingsystemmajrelease, ['7', '18.04']) >= 0 {
         $service_provider    = 'systemd'
       } else {
         $service_provider    = 'init'
